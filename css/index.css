@@ -342,6 +342,78 @@ div .hidden, body .hidden {
     background-size: contain;
 }
 
+/*Utils*/
+.left-in {
+    -webkit-transform: translateX(-300px);
+    -moz-transform: translateX(-300px);
+    transform: translateX(-300px);
+    opacity: .1;
+
+    -webkit-animation: left-in 0.7s ease forwards;
+    -moz-animation: left-in 0.7s ease forwards;
+    animation: left-in 0.7s ease forwards;
+}
+
+@keyframes left-in {
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@-webkit-keyframes left-in {
+  to { -webkit-transform: translateX(0); opacity: 1; }
+}
+
+@-moz-keyframes left-in {
+  to { -moz-transform: translateX(0); opacity: 1; }
+}
+
+
+.right-in {
+    -webkit-transform: translateX(300px);
+    -moz-transform: translateX(300px);
+    transform: translateX(300px);
+    opacity: .1;
+
+    -webkit-animation: right-in 0.7s ease forwards;
+    -moz-animation: right-in 0.7s ease forwards;
+    animation: right-in 0.7s ease forwards;
+}
+
+@keyframes right-in {
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@-webkit-keyframes right-in {
+  to { -webkit-transform: translateX(0); opacity: 1; }
+}
+
+@-moz-keyframes right-in {
+  to { -moz-transform: translateX(0); opacity: 1; }
+}
+
+
+.top-in {
+    -webkit-transform: translateY(-100px);
+    -moz-transform: translateY(-100px);
+    transform: translateY(-100px);
+    opacity: .1;
+
+    -webkit-animation: top-in 0.7s ease forwards;
+    -moz-animation: top-in 0.7s ease forwards;
+    animation: top-in 0.7s ease forwards;
+}
+
+@keyframes top-in {
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@-webkit-keyframes top-in {
+  to { -webkit-transform: translateY(0); opacity: 1; }
+}
+
+@-moz-keyframes top-in {
+  to { -moz-transform: translateY(0); opacity: 1; }
+}
+
 /*MEDIA QUERIES*/
 
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
