@@ -1,0 +1,105 @@
+/*** FONTS ***/
+
+body {
+    font-family: 'mulilight', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-size: 10px;
+    min-width: 320px;
+}
+
+@font-face {
+    font-family: 'mulibold';
+    src: url('../fonts/muli/muli-bold-webfont.eot');
+    src: url('../fonts/muli/muli-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/muli/muli-bold-webfont.woff2') format('woff2'),
+         url('../fonts/muli/muli-bold-webfont.woff') format('woff'),
+         url('../fonts/muli/muli-bold-webfont.ttf') format('truetype'),
+         url('../fonts/muli/muli-bold-webfont.svg#mulibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mulilight';
+    src: url('../fonts/muli/muli-light-webfont.eot');
+    src: url('../fonts/muli/muli-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/muli/muli-light-webfont.woff2') format('woff2'),
+         url('../fonts/muli/muli-light-webfont.woff') format('woff'),
+         url('../fonts/muli/muli-light-webfont.ttf') format('truetype'),
+         url('../fonts/muli/muli-light-webfont.svg#mulilight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mulisemibolditalic';
+    src: url('../fonts/muli/muli-semi-bolditalic-webfont.eot');
+    src: url('../fonts/muli/muli-semi-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/muli/muli-semi-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/muli/muli-semi-bolditalic-webfont.woff') format('woff'),
+         url('../fonts/muli/muli-semi-bolditalic-webfont.ttf') format('truetype'),
+         url('../fonts/muli/muli-semi-bolditalic-webfont.svg#mulisemibolditalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mulisemibold';
+    src: url('../fonts/muli/muli-semibold-webfont.eot');
+    src: url('../fonts/muli/muli-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/muli/muli-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/muli/muli-semibold-webfont.woff') format('woff'),
+         url('../fonts/muli/muli-semibold-webfont.ttf') format('truetype'),
+         url('../fonts/muli/muli-semibold-webfont.svg#mulisemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'muliregular';
+    src: url('../fonts/muli/muli-webfont.eot');
+    src: url('../fonts/muli/muli-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/muli/muli-webfont.woff2') format('woff2'),
+         url('../fonts/muli/muli-webfont.woff') format('woff'),
+         url('../fonts/muli/muli-webfont.ttf') format('truetype'),
+         url('../fonts/muli/muli-webfont.svg#muliregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'oswalddemibold';
+    src: url('../fonts/oswald/oswald-demibold-webfont.eot');
+    src: url('../fonts/oswald/oswald-demibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/oswald/oswald-demibold-webfont.woff2') format('woff2'),
+         url('../fonts/oswald/oswald-demibold-webfont.woff') format('woff'),
+         url('../fonts/oswald/oswald-demibold-webfont.ttf') format('truetype'),
+         url('../fonts/oswald/oswald-demibold-webfont.svg#oswalddemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'oswald_regularregular';
+    src: url('../fonts/oswald/oswald-regular-webfont.eot');
+    src: url('../fonts/oswald/oswald-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/oswald/oswald-regular-webfont.woff2') format('woff2'),
+         url('../fonts/oswald/oswald-regular-webfont.woff') format('woff'),
+         url('../fonts/oswald/oswald-regular-webfont.ttf') format('truetype'),
+         url('../fonts/oswald/oswald-regular-webfont.svg#oswald_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'oswald_stencilbold';
+    src: url('../fonts/oswald/oswald-stencil-webfont.eot');
+    src: url('../fonts/oswald/oswald-stencil-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/oswald/oswald-stencil-webfont.woff2') format('woff2'),
+         url('../fonts/oswald/oswald-stencil-webfont.woff') format('woff'),
+         url('../fonts/oswald/oswald-stencil-webfont.ttf') format('truetype'),
+         url('../fonts/oswald/oswald-stencil-webfont.svg#oswald_stencilbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
