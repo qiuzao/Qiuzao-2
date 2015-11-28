@@ -397,21 +397,24 @@ div .hidden, body .hidden {
     transform: translateY(-100px);
     opacity: .1;
 
-    -webkit-animation: top-in 0.7s ease forwards;
-    -moz-animation: top-in 0.7s ease forwards;
-    animation: top-in 0.7s ease forwards;
+    -webkit-animation: top-in 0.7s cubic-bezier(0.5, 0.1, 1, 1.5) forwards;
+    -moz-animation: top-in 0.7s cubic-bezier(0.5, 0.1, 1, 1.5) forwards;
+    animation: top-in 0.7s cubic-bezier(0.5, 0.1, 1, 1.5) forwards;
 }
 
 @keyframes top-in {
-  to { transform: translateY(0); opacity: 1; }
+  /*90% { transform: translateY(10px); opacity: 0.8; }*/
+  100% { transform: translateY(0); opacity: 1; }
 }
 
 @-webkit-keyframes top-in {
-  to { -webkit-transform: translateY(0); opacity: 1; }
+  /*90% { -webkit-transform: translateY(10px); opacity: 0.8; }*/
+  100% { -webkit-transform: translateY(0); opacity: 1; }
 }
 
 @-moz-keyframes top-in {
-  to { -moz-transform: translateY(0); opacity: 1; }
+  /*90% { -moz-transform: translateY(10px); opacity: 0.8; }*/
+  100% { -moz-transform: translateY(0); opacity: 1; }
 }
 
 /*MEDIA QUERIES*/
