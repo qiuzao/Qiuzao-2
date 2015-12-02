@@ -286,16 +286,17 @@ div .hidden, body .hidden {
 
 /*WORKS*/
 .works-wrapper {
-    max-width: 1120px;
+    max-width: 1190px;
+    width: 84.5%;
     margin: 100px auto 0px;
     overflow: hidden;
 }
 
 .works-unit {
-    width: 30%;
-    min-width: 200px;
+    width: 28%;
     float: left;
-    margin-right: 5%;
+    margin-left: 2.66%;
+    margin-right: 2.66%;
     margin-bottom: 100px;
 }
 
@@ -515,6 +516,12 @@ div .hidden, body .hidden {
 }
 }
 
+@media only screen and (max-width: 1050px) {
+    .works-unit {
+        width: 44.5%;
+    }
+}
+
 @media only screen and (max-width: 920px) {
 .logo-wrapper {
     width: 90px;
@@ -610,9 +617,13 @@ div .hidden, body .hidden {
 }
 
 @media only screen and (max-width: 600px) {
-.social-media-wrapper{
-    display: none;
-}
+    .social-media-wrapper{
+        display: none;
+    }
+
+    .works-unit {
+        width: 95.5%;
+    }
 }
 
 @media only screen and (max-width: 400px) {
