@@ -284,7 +284,35 @@ div .hidden, body .hidden {
     font-size: 12px;
 }
 
+/*WORKS*/
+.works-wrapper {
+    max-width: 1120px;
+    margin: 100px auto 0px;
+    overflow: hidden;
+}
 
+.works-unit {
+    width: 30%;
+    min-width: 200px;
+    float: left;
+    margin-right: 5%;
+    margin-bottom: 100px;
+}
+
+.works-unit img{
+    width: 100%;
+    height: auto;
+}
+
+.works-margin-adjust {
+    margin-right: 0%;
+}
+
+.works-unit a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
 
 /*SOCIAL MEDIA*/
 
