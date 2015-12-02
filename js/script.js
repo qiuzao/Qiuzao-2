@@ -6,7 +6,9 @@ $(function() {
 
 	if (isRetina()) {
 		$.each($(".works-image"), function(index, el) {
-			// add @2x
+			var imgsrc = $(el).attr("src");
+			var newsrc = imgsrc.slice(0, imgsrc.length - 4) + "@2x" + imgsrc.slice(imgsrc.length - 4);
+			$(el).attr("src", newsrc);
 		});
 	};
 
