@@ -1,7 +1,7 @@
 body {
     padding: 4em 0;
     margin: auto;
-    min-width: 320px;
+    min-width: 320px;1
 }
 
 div {
@@ -191,6 +191,10 @@ div .hidden, body .hidden {
     padding-bottom: 15px;
 }
 
+.menu-box:hover {
+    font-family: 'mulisemibold';
+}
+
 .menu-selected {
     font-family: 'mulisemibold';
     border-bottom: 1px solid #ff4e54;
@@ -286,10 +290,14 @@ div .hidden, body .hidden {
 
 /*WORKS*/
 .works-wrapper {
-    max-width: 1190px;
-    width: 84.5%;
+    max-width: 1120px;
+    width: 80%;
     margin: 100px auto 0px;
     overflow: hidden;
+}
+
+.works-invisible {
+    display: none;
 }
 
 .works-unit {
@@ -297,22 +305,86 @@ div .hidden, body .hidden {
     float: left;
     margin-left: 2.66%;
     margin-right: 2.66%;
-    margin-bottom: 100px;
+    margin-bottom: 90px;
 }
 
-.works-unit img{
+.works-unit a {
+    display: inline-block;
+}
+
+.works-unit img {
     width: 100%;
     height: auto;
 }
 
-.works-margin-adjust {
-    margin-right: 0%;
+
+.works-hover {
+    opacity: 0;
+    background-color: rgba(0,0,0,.74);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.works-hover-zoom {
+    background-image: url(../image/zoom.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+}
+
+.works-hover-text {
+    opacity: 0.97;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    margin-top: -6px;
+}
+
+.works-hover-text span {
+    color: #ff4e54;
+}
+
+.works-hover:hover {
+    opacity: .8;
+    transition: .5s;
+}
+
+.works-hover-zoom:hover {
+    background-size: 70%;
+    transition: .5s;
+}
+
+.works-divider {
+    width: 40px;
+    margin: 20px auto 0;
+    height: 1px;
+    background-color: #f0f0f0;
+    margin-bottom: 15px;
 }
 
 .works-unit a {
     display: inline-block;
     width: 100%;
     text-align: center;
+    font-size: 12px;
+}
+
+.works-unit a:hover {
+    font-family: 'mulisemibold';
 }
 
 /*SOCIAL MEDIA*/
@@ -518,7 +590,11 @@ div .hidden, body .hidden {
 
 @media only screen and (max-width: 1050px) {
     .works-unit {
-        width: 44.5%;
+    width: 36%;
+    float: left;
+    margin-left: 6.8%;
+    margin-right: 6.8%;
+    transition: .4s;
     }
 }
 
@@ -614,6 +690,12 @@ div .hidden, body .hidden {
 .challenge-relative-wrapper{
     display: none;
 }
+.works-invisible {
+    display: inherit;
+}
+.works-wrapper {
+margin: 80px auto 0px;
+}
 }
 
 @media only screen and (max-width: 600px) {
@@ -622,7 +704,12 @@ div .hidden, body .hidden {
     }
 
     .works-unit {
-        width: 95.5%;
+    width: 70%;
+    float: left;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 70px;
+    transition: .4s;
     }
 }
 
