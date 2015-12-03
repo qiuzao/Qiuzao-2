@@ -248,6 +248,10 @@ div .hidden, body .hidden {
     color: #545454;
 }
 
+#hangover-plus {
+    display: inline-block;
+}
+
 .ongoing-project {
     font-family: 'mulilight';
     font-size: 11px;

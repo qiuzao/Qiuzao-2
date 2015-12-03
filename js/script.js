@@ -1,3 +1,19 @@
+$.fn.animateRotate = function(angle, duration, easing, complete) {
+  var args = $.speed(duration, easing, complete);
+  var step = args.step;
+  return this.each(function(i, e) {
+    args.complete = $.proxy(args.complete, e);
+    args.step = function(now) {
+      $.style(e, 'transform', 'rotate(' + now + 'deg)');
+      $.style(e, 'transform-origin', '50% 65%');
+      if (step) return step.apply(e, arguments);
+    };
+
+    $({deg: 0}).animate({deg: angle}, args);
+  });
+};
+
+
 $(function() {
 	$(".top-decor").fadeTo(0, 0);
 	$("#slogan-text").fadeTo(0, 0);
@@ -11,6 +27,12 @@ $(function() {
 			$(el).attr("src", newsrc);
 		});
 	};
+
+	$(".challenge-relative-wrapper").hover(function() {
+		$("#hangover-plus").animateRotate(45, 600);
+	}, function() {
+		$("#hangover-plus").animateRotate(0, 600);
+	});
 
 	function topEffect() {
 		$.each($(".top-decor"), function(index, el) {
