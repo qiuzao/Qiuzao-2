@@ -13,11 +13,22 @@ $.fn.animateRotate = function(angle, duration, easing, complete) {
   });
 };
 
+$.fn.visible = function(partial) {
+
+    var $t            = $(this),
+      $w            = $(window),
+      viewTop       = $w.scrollTop(),
+      viewBottom    = viewTop + $w.height(),
+      _top          = $t.offset().top,
+      _bottom       = _top + $t.height(),
+      compareTop    = partial === true ? _bottom : _top,
+      compareBottom = partial === true ? _top : _bottom;
+
+    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+};
+
 
 $(function() {
-	$(".top-decor").fadeTo(0, 0);
-	$("#slogan-text").fadeTo(0, 0);
-
 	topEffect();
 
 	if (isRetinaDisplay()) {
@@ -28,13 +39,47 @@ $(function() {
 		});
 	};
 
+	// rotate the "+" sign in weekly challenges section when hovering
 	$(".challenge-relative-wrapper").hover(function() {
 		$("#hangover-plus").animateRotate(90, 700);
 	}, function() {
 		$("#hangover-plus").animateRotate(0, 600);
 	});
 
+	// move in work units of the same row in sequence
+	$(window).scroll(function(event) {
+		var works = $(".works-unit");
+		var delay = 0;
+		var lastTop = -999;
+		for (var i = 0; i < works.length; i++) {
+			var el = $(works[i]);
+			
+			if (el.visible(true)) {
+				// check if it's in the same row
+				if (el.position().top == lastTop) {
+					delay += 200;
+				} else {
+					delay = 0;
+				}
+
+				window.setTimeout(function(e) {
+					return function() {
+						e.addClass("bottom-in");
+					};
+				}(el), delay);
+				
+			}
+			lastTop = el.position().top;
+		};
+	});
+
+	// emit a trigger event to load bottom in blocks
+	$(window).trigger("scroll");
+
 	function topEffect() {
+		$(".top-decor").fadeTo(0, 0);
+	 	$("#slogan-text").fadeTo(0, 0);
+
 		$.each($(".top-decor"), function(index, el) {
 			window.setTimeout(function() {
 				$(el).addClass("top-in");

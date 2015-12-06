@@ -312,6 +312,7 @@ div .hidden, body .hidden {
     margin-left: 2.66%;
     margin-right: 2.66%;
     margin-bottom: 90px;
+    opacity: 0;
 }
 
 .works-unit a {
@@ -510,18 +511,26 @@ div .hidden, body .hidden {
 }
 
 @keyframes top-in {
-  /*90% { transform: translateY(10px); opacity: 0.8; }*/
   100% { transform: translateY(0); opacity: 1; }
 }
 
 @-webkit-keyframes top-in {
-  /*90% { -webkit-transform: translateY(10px); opacity: 0.8; }*/
   100% { -webkit-transform: translateY(0); opacity: 1; }
 }
 
 @-moz-keyframes top-in {
-  /*90% { -moz-transform: translateY(10px); opacity: 0.8; }*/
   100% { -moz-transform: translateY(0); opacity: 1; }
+}
+
+.bottom-in {
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    transform: translateY(100px);
+    opacity: .1;
+
+    -webkit-animation: top-in 0.7s ease forwards;
+    -moz-animation: top-in 0.7s ease forwards;
+    animation: top-in 0.7s ease forwards;
 }
 
 /*MEDIA QUERIES*/
