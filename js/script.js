@@ -13,6 +13,20 @@ $.fn.animateRotate = function(angle, duration, easing, complete) {
   });
 };
 
+$.fn.visible = function(partial) {
+
+    var $t            = $(this),
+      $w            = $(window),
+      viewTop       = $w.scrollTop(),
+      viewBottom    = viewTop + $w.height(),
+      _top          = $t.offset().top,
+      _bottom       = _top + $t.height(),
+      compareTop    = partial === true ? _bottom : _top,
+      compareBottom = partial === true ? _top : _bottom;
+
+    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+};
+
 
 $(function() {
 	$(".top-decor").fadeTo(0, 0);
@@ -33,6 +47,18 @@ $(function() {
 	}, function() {
 		$("#hangover-plus").animateRotate(0, 600);
 	});
+
+	$(window).scroll(function(event) {
+		$(".works-unit").each(function(i, el) {
+			var el = $(el);
+			if (el.visible(true)) {
+				el.addClass("bottom-in"); 
+			} 
+		});
+	});
+
+	// emit a trigger event to load bottom in blocks
+	$(window).trigger("scroll");
 
 	function topEffect() {
 		$.each($(".top-decor"), function(index, el) {
