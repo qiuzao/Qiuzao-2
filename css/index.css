@@ -899,6 +899,19 @@ div .hidden, body .hidden {
 .challenge-subtitle-wrapper {
     display: none;
 }
+.monster-orange {
+    width: 28px;
+    height: 32px;
+}
+.monster-blue {
+    width: 35px;
+    height: 38px;
+}
+.monster-green {
+    width: 25px;
+    height: 26px;
+    right: 30%;
+}
 }
 
 @media only screen and (max-width: 767px) {
@@ -932,6 +945,20 @@ margin: 80px auto 0px;
 
     #copyright {
         display: none;
+    }
+
+    .monster-orange {
+        width: 19px;
+        height: 21px;
+    }
+    .monster-blue {
+        width: 23px;
+        height: 26px;
+    }
+    .monster-green {
+        width: 16px;
+        height: 18px;
+        right: 35%;
     }
 }
 
