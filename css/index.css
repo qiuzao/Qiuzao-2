@@ -312,6 +312,7 @@ div .hidden, body .hidden {
     margin-left: 2.66%;
     margin-right: 2.66%;
     margin-bottom: 90px;
+    opacity: 0;
 }
 
 .works-unit a {
