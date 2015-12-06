@@ -29,7 +29,7 @@ $(function() {
 	};
 
 	$(".challenge-relative-wrapper").hover(function() {
-		$("#hangover-plus").animateRotate(45, 600);
+		$("#hangover-plus").animateRotate(90, 700);
 	}, function() {
 		$("#hangover-plus").animateRotate(0, 600);
 	});

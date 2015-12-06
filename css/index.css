@@ -250,6 +250,8 @@ div .hidden, body .hidden {
 
 #hangover-plus {
     display: inline-block;
+    font-family: "mulisemibold";
+    font-size: 15px;
 }
 
 .ongoing-project {
