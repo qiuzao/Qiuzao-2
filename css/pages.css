@@ -1,0 +1,241 @@
+body {
+    overflow: hidden;
+    padding-left: 100px;
+    height: 3000px;
+}
+
+div {
+    position: relative;
+}
+
+.clear {
+    clear:both;
+}
+
+.hidden {
+    display: none;
+}
+
+/*SIDE PANE WRAPPER*/
+.side-pane-wrapper {
+    position: fixed;
+    width: 280px;
+    left: 16%;
+    top: 40px;
+}
+
+.logo-s {
+    float: left;
+    width: 60px;
+    height: 60px;
+    background-image: url(../image/Logo-s.png);
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+    background-size: contain;
+}
+
+/*MENU ITEMS*/
+
+.menu-line-wrapper {
+    overflow: hidden;
+}
+
+.menu-wrapper {
+    float: left;
+    height: 60px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.menu-box {
+    font-family: 'mulilight';
+    width: 70px;
+    height: 60px;
+    font-size: 12px;
+    color: #545454;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 15px;
+    padding-top: 30px;
+}
+
+.menu-box:hover {
+    font-family: 'mulisemibold';
+    color: #ff4e54;
+}
+
+.menu-selected span {
+    color: #ff4e54;
+}
+
+.menu-work {
+    text-align: left;
+    float: left;
+}
+
+.menu-freebie {
+    text-align: center;
+    float: left;
+}
+
+.menu-about {
+    text-align: right;
+    float: right;
+}
+
+/*TITLE AREA*/
+
+.title-area-wrapper {
+    margin-top: 100px;
+    overflow: hidden;
+    width: 280px;
+}
+
+/*SOCIAL MEDIA*/
+
+.social-media-wrapper {
+    width: 30px;
+    height: 200px;
+    float: left;
+    padding-right: 10px;
+    border-right: 1px solid #f0f0f0;
+}
+
+.social-media-wrapper a {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.dribbble {
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-image: url(../image/dribbble.png);
+    background-size: contain;
+}
+
+.twitter {
+    width: 14px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-image: url(../image/twitter.png);
+    background-size: contain;
+}
+
+.linkedin {
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-image: url(../image/linkedin.png);
+    background-size: contain;
+}
+
+.email {
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-image: url(../image/email.png);
+    background-size: contain;
+}
+
+.social-monster {
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-image: url(../image/SocialMonster.png);
+    background-size: contain;
+}
+
+/*TITLE-RIGHT*/
+
+.title-right-wrapper {
+    float: left;
+    width: 250px;
+    color: #545454;
+    font-size: 12px;
+}
+
+.title-subtitle {
+    padding-bottom: 6px;
+    padding-left: 20px;
+}
+
+.title-main {
+    font-family: 'oswalddemibold';
+    font-size: 30px;
+    line-height: 40px;
+     padding-left: 20px;
+}
+
+.title-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #f0f0f0;
+    margin: 12px 0;
+}
+
+.title-type {
+    padding: 0 0 5px 20px;
+    font-family: 'mulisemibold';
+}
+
+.title-description {
+    line-height: 18px;
+    padding: 0 0 50px 20px;
+}
+
+.title-nav-wrapper {
+    overflow: hidden;
+    color: #ff4e54;
+    padding-left: 20px;
+}
+
+.title-nav-wrapper a:hover {
+    font-family: 'mulisemibold';
+    transition: .7s;
+}
+
+.title-nav-previous {
+    float: left;
+}
+
+.title-nav-next {
+    float: right;
+}
+
+/*IMAGES*/
+
+.image-wrapper {
+   float: right;
+   width: 40%;
+   margin-right: 16%;
+   margin-top: 222px;
+}
+
+.image-wrapper img {
+    float: left;
+}
+
+
+
+/*MEDIA QUERIES*/
+
+@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
+    .logo-s {        
+        background-image: url(../image/Logo-s@2x.png);
+    }
+    .dribbble {
+    background-image: url(../image/dribbble@2x.png);
+    }
+    .twitter{
+        background-image: url(../image/twitter@2x.png);
+    }
+    .linkedin {
+        background-image: url(../image/linkedin@2x.png);
+    }
+    .email {
+        background-image: url(../image/email@2x.png);
+    }
+    .social-monster {
+        background-image: url(../image/SocialMonster@2x.png);
+    }
+}

@@ -17,7 +17,7 @@ div .hidden, body .hidden {
 }
 
 .hidden {
-    display: hidden;
+    display: none;
 }
 
 /*HEADER LOGO*/
