@@ -46,8 +46,8 @@ $(function() {
 		$("#hangover-plus").animateRotate(0, 600);
 	});
 
-	// move in work units of the same row in sequence
 	$(window).scroll(function(event) {
+		// move in work units of the same row in sequence
 		var works = $(".works-unit");
 		var delay = 0;
 		var lastTop = -999;
@@ -70,6 +70,20 @@ $(function() {
 				
 			}
 			lastTop = el.position().top;
+		};
+
+		// ghost moves
+		var orangeGhost = $(".monster-orange");
+		if (orangeGhost.visible(true)) {
+			orangeGhost.addClass("left-in");
+		};
+		var blueGhost = $(".monster-blue");
+		if (blueGhost.visible(true)) {
+			blueGhost.addClass("right-in");
+		};
+		var greenGhost = $(".monster-green");
+		if (greenGhost.visible(true)) {
+			greenGhost.addClass("right-in-2");
 		};
 	});
 

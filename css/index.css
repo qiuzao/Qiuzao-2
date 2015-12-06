@@ -602,6 +602,39 @@ div .hidden, body .hidden {
     background-image: url(../image/PlusThree.png);
 }
 
+.monster {
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+}
+
+.monster-orange {
+    width: 38px;
+    height: 43px;
+    background-image: url(../image/MonsterYellow.png);
+    z-index: 5;
+    top: 0%;
+    left: 20%;
+}
+
+.monster-blue {
+    width: 47px;
+    height: 52px;
+    background-image: url(../image/MonsterBlue.png);
+    z-index: 5;
+    top: -15%;
+    right: 22%;
+}
+
+.monster-green {
+    width: 33px;
+    height: 37px;
+    background-image: url(../image/MonsterGreen.png);
+    z-index: 5;
+    top: 0%;
+    right: 28%;
+}
+
 /*Utils*/
 .left-in {
     -webkit-transform: translateX(-300px);
@@ -636,6 +669,17 @@ div .hidden, body .hidden {
     -webkit-animation: right-in 0.7s ease forwards;
     -moz-animation: right-in 0.7s ease forwards;
     animation: right-in 0.7s ease forwards;
+}
+
+.right-in-2 {
+    -webkit-transform: translateX(300px);
+    -moz-transform: translateX(300px);
+    transform: translateX(300px);
+    opacity: .1;
+
+    -webkit-animation: right-in 0.7s cubic-bezier(0.5, 1.2, 0.9, 1.2) forwards;
+    -moz-animation: right-in 0.7s cubic-bezier(0.5, 1.2, 0.9, 1.2) forwards;
+    animation: right-in 0.7s cubic-bezier(0.5, 1.2, 0.9, 1.2) forwards;
 }
 
 @keyframes right-in {
