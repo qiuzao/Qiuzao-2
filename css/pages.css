@@ -1,7 +1,6 @@
 body {
-    overflow: hidden;
+    overflow: auto;
     padding-left: 100px;
-    height: 3000px;
 }
 
 div {

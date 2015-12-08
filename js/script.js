@@ -74,15 +74,15 @@ $(function() {
 
 		// ghost moves
 		var orangeGhost = $(".monster-orange");
-		if (orangeGhost.visible(true)) {
+		if (orangeGhost.length > 0 && orangeGhost.visible(true)) {
 			orangeGhost.addClass("left-in");
 		};
 		var blueGhost = $(".monster-blue");
-		if (blueGhost.visible(true)) {
+		if (blueGhost.length > 0 && blueGhost.visible(true)) {
 			blueGhost.addClass("right-in");
 		};
 		var greenGhost = $(".monster-green");
-		if (greenGhost.visible(true)) {
+		if (greenGhost.length > 0 && greenGhost.visible(true)) {
 			greenGhost.addClass("right-in-2");
 		};
 	});
