@@ -213,8 +213,98 @@ div {
 
 .image-wrapper img {
     float: left;
+    width: 400px;
+    margin-bottom: 50px;
 }
 
+/*HEADBAR WRAPPER*/
+
+.headbar-wrapper {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background-color: rgba(255,255,255,.9);
+    border-bottom: 1px solid #f0f0f0;
+    display: none;
+}
+
+.logo-middle {
+    float: none;
+    width: 50px;
+    height: 50px;
+    margin: 5px auto 5px;
+}
+
+.headbar-nav-line {
+    font-size: 12px;
+    overflow: hidden;
+    margin: 15px;
+}
+
+
+.headbar-nav-line div:hover {
+    color: #ff4e54;
+}
+
+.headbar-nav-previous {
+    float: left;
+    text-align: left;
+    color: #ff4e54;
+    width: 20%;
+}
+
+.headbar-nav-middle {
+    float: left;
+    text-align: center;
+    letter-spacing: 1.5px;
+    width: 60%;
+}
+
+.headbar-nav-next {
+    float: right;
+    text-align: right;
+    color: #ff4e54;
+    width: 20%;
+}
+
+/*TITLE MIDDLE*/
+
+.title-middle-wrapper {
+    margin-top: 130px;
+    display: none;
+}
+
+.title-middle-wrapper div {
+    text-align: center;
+}
+
+.title-middle-main {
+    font-family: 'oswalddemibold';
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.title-middle-description {
+    font-size: 12px;
+    width: 70%;
+    margin: auto;
+    line-height: 18px;
+}
+
+.title-middle-divider {
+    background-color: #f0f0f0;
+    width: 200px;
+    height: 1px;
+    margin: 15px auto;
+}
+
+.fix {
+    height: 1px;
+    width: 100%;
+}
 
 
 /*MEDIA QUERIES*/
@@ -237,5 +327,58 @@ div {
     }
     .social-monster {
         background-image: url(../image/SocialMonster@2x.png);
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .image-wrapper {
+        width: 35%;
+    }
+    .side-pane-wrapper {
+        left: 10%;
+    }
+    .image-wrapper img {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 823px) {
+    body {
+        padding-left: 0;
+        color: #545454;
+    }
+
+    .side-pane-wrapper {
+        display: none;
+    }
+
+    .image-wrapper {
+        width: 400px;
+        margin:auto;
+        overflow: hidden;
+        float: none;
+        margin-top: 60px;
+    }
+
+    .image-wrapper img{
+        width: 400px;
+    }
+
+    .headbar-wrapper {
+        display: inherit;
+    }
+
+    .title-middle-wrapper {
+        display: inherit;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .image-wrapper {
+        width: 300px;
+    }
+
+    .image-wrapper img{
+        width: 300px;
     }
 }
