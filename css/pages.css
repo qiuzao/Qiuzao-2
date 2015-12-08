@@ -364,8 +364,28 @@ div .linked-margin-fix {
     width: 500px;
 }
 
+div .big-width-fix {
+    width: 200px;
+}
+
+.big-width-fix img {
+    width: 200px;
+    margin-right: 30px;
+}
+
 div .ninja-width-fix {
     width: 300px !important;
+}
+
+.menu-selected {
+    cursor: inherit;
+    color: #ff4e54;
+    border-bottom: 1px solid #ff4e54;
+    font-family: 'mulisemibold';
+}
+
+.borderless-fix img {
+    border: 1px solid #f0f0f0;
 }
 
 /*MEDIA QUERIES*/
@@ -414,6 +434,9 @@ div .ninja-width-fix {
     .small-width-fix img {
     width: 360px;
     }
+    .big-width-fix img {
+    width: 200px;
+    }
 }
 
 @media only screen and (max-width: 823px) {
@@ -458,6 +481,15 @@ div .ninja-width-fix {
         float: none;
         margin-right: auto;
         margin-left: auto;
+    }
+
+    .big-width-fix {
+        width: 250px;
+    }
+
+    .big-width-fix img {
+        width: 250px;
+        margin-right: 0px;
     }
 }
 
