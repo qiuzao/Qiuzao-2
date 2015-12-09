@@ -6,6 +6,7 @@ body {
     -webkit-font-smoothing: antialiased;
     font-size: 10px;
     min-width: 320px;
+    overflow-x: hidden;
 }
 
 @font-face {
