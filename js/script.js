@@ -73,22 +73,37 @@ $(function() {
 		};
 
 		// ghost moves
-		var orangeGhost = $(".monster-orange");
+		var orangeGhost = $(".monster-orange.animated");
 		if (orangeGhost.length > 0 && orangeGhost.visible(true)) {
 			orangeGhost.addClass("left-in");
 		};
-		var blueGhost = $(".monster-blue");
+		var blueGhost = $(".monster-blue.animated");
 		if (blueGhost.length > 0 && blueGhost.visible(true)) {
 			blueGhost.addClass("right-in");
 		};
-		var greenGhost = $(".monster-green");
+		var greenGhost = $(".monster-green.animated");
 		if (greenGhost.length > 0 && greenGhost.visible(true)) {
 			greenGhost.addClass("right-in-2");
 		};
+
+		// detail pages
+		var imgs = $(".image-wrapper > img");
+		var titles = $(".image-wrapper > div.animated");
+		bottomIn(imgs);
+		bottomIn(titles);
 	});
 
 	// emit a trigger event to load bottom in blocks
 	$(window).trigger("scroll");
+
+	function bottomIn(els) {
+		for (var i = 0; i < els.length; i++) {
+			var el = $(els[i]);
+			if (el.visible(true)) {
+				el.addClass("bottom-in");
+			};
+		};
+	}
 
 	function topEffect() {
 		$(".top-decor").fadeTo(0, 0);
