@@ -27,8 +27,23 @@ $.fn.visible = function(partial) {
     return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
 };
 
+// challenges data
+var challenges = [{
+	imgsrc: "image/challenges/BookGuess.gif",
+	title: "Book & Book",
+	link: "pages/challenges.html#1",
+	week: "Week 1"
+}, {
+	imgsrc: "image/challenges/winter.gif",
+	title: "Winter Hunt",
+	link: "pages/challenges.html#8",
+	week: "Week 8"
+}];
+
 
 $(function() {
+	randomizeChallengeSection();
+
 	topEffect();
 
 	if (isRetinaDisplay()) {
@@ -46,55 +61,18 @@ $(function() {
 		$("#hangover-plus").animateRotate(0, 600);
 	});
 
-	$(window).scroll(function(event) {
-		// move in work units of the same row in sequence
-		var works = $(".works-unit");
-		var delay = 0;
-		var lastTop = -999;
-		for (var i = 0; i < works.length; i++) {
-			var el = $(works[i]);
-			
-			if (el.visible(true)) {
-				// check if it's in the same row
-				if (el.position().top == lastTop) {
-					delay += 200;
-				} else {
-					delay = 0;
-				}
-
-				window.setTimeout(function(e) {
-					return function() {
-						e.addClass("bottom-in");
-					};
-				}(el), delay);
-				
-			}
-			lastTop = el.position().top;
-		};
-
-		// ghost moves
-		var orangeGhost = $(".monster-orange.animated");
-		if (orangeGhost.length > 0 && orangeGhost.visible(true)) {
-			orangeGhost.addClass("left-in");
-		};
-		var blueGhost = $(".monster-blue.animated");
-		if (blueGhost.length > 0 && blueGhost.visible(true)) {
-			blueGhost.addClass("right-in");
-		};
-		var greenGhost = $(".monster-green.animated");
-		if (greenGhost.length > 0 && greenGhost.visible(true)) {
-			greenGhost.addClass("right-in-2");
-		};
-
-		// detail pages
-		var imgs = $(".image-wrapper > img");
-		var titles = $(".image-wrapper > div.animated");
-		bottomIn(imgs);
-		bottomIn(titles);
-	});
-
+	scrollInEffect();
 	// emit a trigger event to load bottom in blocks
 	$(window).trigger("scroll");
+
+	function randomizeChallengeSection() {
+		var count = challenges.length;
+		var num = Math.floor(Math.random() * count);
+		$("#challenge-gif").attr("src", challenges[num].imgsrc);
+		$("#challenge-name").text(challenges[num].title);
+		$("#challenge-week").text(challenges[num].week);
+		$("#challenge-link").attr("href", challenges[num].link);
+	}
 
 	function bottomIn(els) {
 		for (var i = 0; i < els.length; i++) {
@@ -124,4 +102,53 @@ $(function() {
             return (mq && mq.matches || (window.devicePixelRatio > 1)); 
         }
     }
+
+    function scrollInEffect() {
+		$(window).scroll(function(event) {
+			// move in work units of the same row in sequence
+			var works = $(".works-unit");
+			var delay = 0;
+			var lastTop = -999;
+			for (var i = 0; i < works.length; i++) {
+				var el = $(works[i]);
+				
+				if (el.visible(true)) {
+					// check if it's in the same row
+					if (el.position().top == lastTop) {
+						delay += 200;
+					} else {
+						delay = 0;
+					}
+
+					window.setTimeout(function(e) {
+						return function() {
+							e.addClass("bottom-in");
+						};
+					}(el), delay);
+					
+				}
+				lastTop = el.position().top;
+			};
+
+			// ghost moves
+			var orangeGhost = $(".monster-orange.animated");
+			if (orangeGhost.length > 0 && orangeGhost.visible(true)) {
+				orangeGhost.addClass("left-in");
+			};
+			var blueGhost = $(".monster-blue.animated");
+			if (blueGhost.length > 0 && blueGhost.visible(true)) {
+				blueGhost.addClass("right-in");
+			};
+			var greenGhost = $(".monster-green.animated");
+			if (greenGhost.length > 0 && greenGhost.visible(true)) {
+				greenGhost.addClass("right-in-2");
+			};
+
+			// detail pages
+			var imgs = $(".image-wrapper > img");
+			var titles = $(".image-wrapper > div.animated");
+			bottomIn(imgs);
+			bottomIn(titles);
+		});
+	}
 });
